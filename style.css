@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.game{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 450px;
+    height: 650px;
+    background-image: url(/assets/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 5px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.bird{
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    transition: top 100ms linear;
+}
+.pipe {
+    width: 50px;
+    height: 40%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-image: url(/assets/pipe.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+}
+.pipe:nth-child(2){
+    transform: rotate(360deg);
+    height: 35%;
+    top: 65%;
+}
+.top{
+    /*animation: pipe  4s infinite linear;*/
+    rotate: 180deg;
+}
+.bottom{
+
+}
+@keyframes move{
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: -50px;
+    }
+}
+.obs{
+    animation: move 4s linear infinite;
+}
+.score{
+    color: goldenrod;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-weight: bolder;
+    font-size: larger;
+    z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
